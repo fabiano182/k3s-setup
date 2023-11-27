@@ -33,14 +33,14 @@ cd k3s-setup
 
 Install the self-signed root certificate that was generated in `./cluster-system/cert-manager/certs/tls.crt` into your local browser or computer truststore for root certificates.
 
-When setup is finished and all services are running open [https://k8sdash](https://k8sdash) in your browser and enjoy Kubernetes.
+When setup is finished and all services are running open [https://k8s.dashboad](https://k8s.dashboard) in your browser and enjoy Kubernetes.
 
 **Important - For Windows only:**
 
-Edit the hosts file (typically in [`C:\Windows\system32\drivers\etc\hosts`](C:/Windows/system32/drivers/etc/hosts)) and add a mapping line for the hostname k8sdash:
+Edit the hosts file (typically in [`C:\Windows\system32\drivers\etc\hosts`](C:/Windows/system32/drivers/etc/hosts)) and add a mapping line for the hostname k8s.dashboard:
 
 ```text
-127.0.0.1 k8sdash
+127.0.0.1 k8s.dashboard
 ```
 
 To configure the correct KUBECONFIG in Linux/WSL2 do:
@@ -121,7 +121,7 @@ It will call the following sub-scripts:
 
       This scripts deploys the [Kubernetes dashboard](https://github.com/kubernetes/dashboard) management UI from the original helm chart.
 
-      Together with the Ingress component from previous step the UI should appear for the local URI [https://k8sdash](https://k8sdash)
+      Together with the Ingress component from previous step the UI should appear for the local URI [https://k8s.dashboard](https://k8s.dashboard)
 
       **Important:**
 

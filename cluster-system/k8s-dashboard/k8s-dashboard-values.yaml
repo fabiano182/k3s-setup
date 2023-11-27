@@ -10,11 +10,11 @@ extraArgs:
 ingress:
   enabled: true
   hosts:
-    - "k8sdash"
+    - "k8s.dashboard"
   annotations:
     cert-manager.io/cluster-issuer: local-ca
 
   tls:
     - hosts:
-        - "k8sdash"
-      secretName: k8sdash
+        - "k8s.dashboard"
+      secretName: k8s-dashboard

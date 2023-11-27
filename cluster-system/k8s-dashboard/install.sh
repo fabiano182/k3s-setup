@@ -6,10 +6,10 @@ helm upgrade k8s-dashboard kubernetes-dashboard/kubernetes-dashboard -n cluster-
 sleep 5
 kubectl delete clusterrolebinding kubernetes-dashboard -n cluster-system --ignore-not-found=true
 kubectl create clusterrolebinding kubernetes-dashboard -n cluster-system --clusterrole=cluster-admin --serviceaccount=cluster-system:kubernetes-dashboard
-if grep -q k8sdash /etc/hosts; then
-  echo "k8sdash already in hosts file"
+if grep -q k8s.dashboard /etc/hosts; then
+  echo "k8s.dashboard already in hosts file"
 else
-  echo "Adding k8sdash to hosts file"
-  echo "127.0.0.1 k8sdash" | sudo tee -a /etc/hosts
+  echo "Adding k8s.dashboard to hosts file"
+  echo "127.0.0.1 k8s.dashboard" | sudo tee -a /etc/hosts
 fi
 echo "<<<<< Kubernetes dashboard ready."
