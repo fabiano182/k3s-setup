@@ -3,6 +3,7 @@ echo ">>>>> Bootstrapping K3s"
 ## Copy crictl configuration - K3s uses crictl (containerd) for container management
 sudo cp crictl.yaml /etc
 ## 1. Setup K3s without additional controllers (we will do it all by ourselves)
+export INSTALL_K3S_VERSION=v1.26.10+k3s2
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable traefik,metrics-server --disable-helm-controller --write-kubeconfig-mode 644 sh" sh -
 ## 2. Switch to k3s kubeconfig context
 mkdir -p ~/.kube
