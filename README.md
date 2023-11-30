@@ -38,13 +38,10 @@ When setup is finished and all services are running open [https://k8s.dashboad](
 
 **Important - For Windows only:**
 
-Edit the hosts file (typically in [`C:\Windows\system32\drivers\etc\hosts`](C:/Windows/system32/drivers/etc/hosts)) and add a mapping line for the hostname k8s.dashboard:
+Edit the hosts file (typically in [`C:\Windows\system32\drivers\etc\hosts`](C:/Windows/system32/drivers/etc/hosts)) and add mapping lines for the hostname k8s.dashboard and rancher.local:
 
 ```text
 <WSL2 Default Interface IP> k8s.dashboard
-```
-
-```text
 <WSL2 Default Interface IP> rancher.local
 ```
 
