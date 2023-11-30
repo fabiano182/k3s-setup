@@ -17,4 +17,9 @@ if grep -qi microsoft /proc/version; then
 else
   echo "Native Linux - No need to install nginx"
 fi
+
+## 4. Prepare Rancher
+cd rancher/
+./install-rancher.sh
+
 echo "*** Finished! Enjoy your local K8s environment. ***"

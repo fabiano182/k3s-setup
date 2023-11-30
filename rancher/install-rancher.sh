@@ -26,7 +26,4 @@ kubectl -n cattle-system rollout status deploy/rancher
 
 kubectl -n cattle-system get deploy rancher
 
-echo "Rancher Password"
-kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}{{"\n"}}'
-
 echo "<<<<< Rancher ready."

@@ -13,6 +13,7 @@ The setup was tested for following environments:
 - Debian 11
 - Ubuntu Linux 22.04 for WSL2 (MS Windows 10 / 11)
 - Debian 11 for WSL2 (MS Windows 10 / 11)
+- Fedora 38
 
 ## How to start? (TL;DR)
 
@@ -33,14 +34,18 @@ cd k3s-setup
 
 Install the self-signed root certificate that was generated in `./cluster-system/cert-manager/certs/tls.crt` into your local browser or computer truststore for root certificates.
 
-When setup is finished and all services are running open [https://k8s.dashboad](https://k8s.dashboard) in your browser and enjoy Kubernetes.
+When setup is finished and all services are running open [https://k8s.dashboad](https://k8s.dashboard) or [https://rancher.local](https://rancher.local) in your browser and enjoy Kubernetes.
 
 **Important - For Windows only:**
 
 Edit the hosts file (typically in [`C:\Windows\system32\drivers\etc\hosts`](C:/Windows/system32/drivers/etc/hosts)) and add a mapping line for the hostname k8s.dashboard:
 
 ```text
-127.0.0.1 k8s.dashboard
+<WSL2 Default Interface IP> k8s.dashboard
+```
+
+```text
+<WSL2 Default Interface IP> rancher.local
 ```
 
 To configure the correct KUBECONFIG in Linux/WSL2 do:
